@@ -1,13 +1,16 @@
 # PDF to Audiobook (split by character length or something)
 
-## install dependancies
+Uses Textract and Google Wavenet
+
+
+## Install dependencies
 ```
 conda create --name <name>
 conda activate <name>
 pip install -r requirements.txt
 ```
 
-## install system dependancies (linux only)
+## Install system dependencies (linux only)
 ```
 apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils pstotext tesseract-ocr \
 flac ffmpeg lame libmad0 libsox-fmt-mp3 sox libjpeg-dev swig|
