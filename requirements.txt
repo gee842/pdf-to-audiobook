@@ -1,5 +1,3 @@
-
 google-cloud-texttospeech
-PyPDF2
 textract
 
