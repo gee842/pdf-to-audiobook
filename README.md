@@ -1,4 +1,4 @@
-# PDF to Audiobook (split by character length or something)
+# PDF to Audiobook
 
 Uses Textract and Google Wavenet
 
