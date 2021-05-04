@@ -6,7 +6,7 @@ import os
 import re
 
 
-def comment_to_mp3(input_text, FILEPATH_QUOTA,POST_ID,randomize=False,voice='en-US-Wavenet-H'):
+def comment_to_mp3(input_text, FILEPATH_QUOTA,POST_ID,voice='en-US-Wavenet-H'):
     num_of_chars = len(input_text)
 
     with open(FILEPATH_QUOTA, 'r') as f:
@@ -15,13 +15,8 @@ def comment_to_mp3(input_text, FILEPATH_QUOTA,POST_ID,randomize=False,voice='en-
         if quota_remaining < num_of_chars+100:
             raise Exception("Quota depleted :(")
     
-    if randomize:
-        selected_voice = random.choice(names_list)
-        print(f"RANDOM VOICE = {selected_voice}")
 
-    else:
-        selected_voice = voice
-
+    selected_voice = voice
     client = texttospeech.TextToSpeechClient()
     synthesis_input = texttospeech.SynthesisInput(text=input_text)
     voice = texttospeech.VoiceSelectionParams(
